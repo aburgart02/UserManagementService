@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:9.0
+    container_name: mysql-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ums
+      MYSQL_USER: user
+      MYSQL_PASSWORD: qwerty123
+      MYSQL_RANDOM_ROOT_PASSWORD: "no"
+    ports:
+      - "3306:3306"
